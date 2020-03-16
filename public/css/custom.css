@@ -31,6 +31,7 @@ a:hover {
   margin-bottom: 0;
   list-style: none;
   color: #6c757d;
+  font-weight: bold;
 }
 
 .nav a {
@@ -51,4 +52,12 @@ a:hover {
 
 .masthead-title {
   float: left;
+}
+
+.masthead img {
+  display: inlne-block;
+  height: 1.5em;
+  width: 1.5em;
+  float: left;
+  margin-right: .5em;
 }
