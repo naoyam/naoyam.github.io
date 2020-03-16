@@ -227,11 +227,35 @@ blockquote p:last-child {
   }
 }
 
+figure {
+    display: block;
+    max-width: 70%;
+    margin: 2em auto 2em;
+}
+    
 img {
   display: block;
   max-width: 100%;
-  margin: 0 0 1rem;
   border-radius: 5px;
+}
+
+figure img {
+    vertical-aign: top;
+}
+
+figcaption {
+    text-align: center;
+}
+
+img.inline {
+  display: inline;
+  max-width: 1em;
+  margin: 0;
+  border-radius: 0;
+}
+
+img.white {
+    filter: invert(100%) sepia(50%) saturate(24%) hue-rotate(79deg) brightness(115%) contrast(100%);
 }
 
 /* Tables */

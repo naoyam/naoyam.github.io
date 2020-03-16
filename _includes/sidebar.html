@@ -1,15 +1,19 @@
 <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
      styles, `#sidebar-checkbox` for behavior. -->
-<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox" {% if page.title =="Home" %}checked{% endif %}>
 
 <!-- Toggleable sidebar -->
 <div class="sidebar" id="sidebar">
+    <div class="sidebar-item">
+        <img src="{{ site.baseurl }}/public/portrait.jpg" style="margin-top: 50px; margin-bottom: 0px; border-radius: 50%; width: 75%; margin-left: auto; margin-right: auto;" alt="Portrait" />
+    </div>
   <div class="sidebar-item">
     <p>{{ site.description }}</p>
   </div>
 
   <nav class="sidebar-nav">
     <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}/">Home</a>
+    <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}/blog/">Blog</a>
 
     {% comment %}
       The code below dynamically generates a sidebar nav of pages with
@@ -24,13 +28,20 @@
         {% endif %}
       {% endif %}
     {% endfor %}
-
+    {% comment %}
     <a class="sidebar-nav-item" href="{{ site.github.repo }}/archive/v{{ site.version }}.zip">Download</a>
+
     <a class="sidebar-nav-item" href="{{ site.github.repo }}">GitHub project</a>
-    <span class="sidebar-nav-item">Currently v{{ site.version }}</span>
+    {% endcomment %}
   </nav>
 
   <div class="sidebar-item">
+    <p>
+      <span style="margin-right: 0.5em">
+      <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#110;&#97;&#111;&#121;&#97;&#46;&#109;&#97;&#114;&#117;&#121;&#97;&#109;&#97;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;"><img class="inline white" src="/public/logos/email.svg"/></a></span>
+      <span style="margin-right: 0.5em"><a href="https://www.linkedin.com/in/naoya-maruyama-65021816/"><img class="inline white" src="/public/logos/linkedin.svg"/></a></span>
+      <span style="margin-right: 0.5em"><a href="https://github.com/naoyam"><img class="inline white" src="/public/logos/github.svg"/><a/></span>
+    </p>
     <p>
       &copy; {{ site.time | date: '%Y' }}. All rights reserved.
     </p>
